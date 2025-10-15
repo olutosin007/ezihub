@@ -203,4 +203,171 @@ document.addEventListener("DOMContentLoaded", () => {
   darkModeToggler();
 
   darkTogglerCheckbox.addEventListener("click", darkModeToggler);
+
+  // ===== Waitlist modal + forms
+  const modal = document.getElementById("waitlist-modal");
+  const waitlistForm = document.getElementById("waitlist-form");
+  const successSpan = document.getElementById("waitlist-success");
+
+  function openModal(source) {
+    if (!modal) return;
+    if (waitlistForm) waitlistForm.dataset.source = source || "hero";
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+  function closeModal() {
+    if (!modal) return;
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+
+  document.querySelectorAll('[data-open="waitlist-modal"]').forEach((btn) => {
+    btn.addEventListener("click", () => openModal(btn.dataset.source));
+  });
+  modal?.querySelectorAll('[data-close]').forEach((btn) =>
+    btn.addEventListener("click", closeModal)
+  );
+
+  async function submitForm(form) {
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+    payload.source = form.dataset.source || "unknown";
+    const honeypot = modal?.querySelector('[data-honeypot] input');
+    if (honeypot && honeypot.value) return; // bot
+    
+    // Basic validation
+    if (!payload.email || !payload.consent) {
+      console.warn('Form validation failed: missing required fields');
+      return;
+    }
+    
+    // Analytics event
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'lead_submit_attempt', {
+        event_category: 'engagement',
+        event_label: payload.source
+      });
+    }
+    
+    const res = await fetch('/api/leads', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(() => null);
+    
+    if (res && res.ok) {
+      // Analytics success event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'lead_submit_success', {
+          event_category: 'engagement',
+          event_label: payload.source
+        });
+      }
+      
+      if (form === waitlistForm) {
+        successSpan?.classList.remove('hidden');
+        setTimeout(() => { successSpan?.classList.add('hidden'); closeModal(); }, 1400);
+      } else {
+        const banner = document.createElement('div');
+        banner.className = 'mt-4 rounded-sm bg-green-600/20 p-3 text-sm text-green-200';
+        banner.textContent = 'Thanks, your message has been sent.';
+        form.appendChild(banner);
+        setTimeout(() => banner.remove(), 3000);
+      }
+      form.reset();
+    } else {
+      // Analytics error event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'lead_submit_error', {
+          event_category: 'engagement',
+          event_label: payload.source
+        });
+      }
+    }
+  }
+
+  waitlistForm?.addEventListener('submit', (e) => { e.preventDefault(); submitForm(waitlistForm); });
+  const contactForm = document.getElementById('contact-form');
+  contactForm?.addEventListener('submit', (e) => { e.preventDefault(); submitForm(contactForm); });
+  
+  // Collapsible Contact form toggle
+  const collapseToggle = document.getElementById('contact-collapse-toggle');
+  const collapseContent = document.getElementById('contact-collapse-content');
+  const collapseArrow = document.getElementById('contact-collapse-arrow');
+  if (collapseToggle && collapseContent) {
+    collapseToggle.addEventListener('click', () => {
+      const isHidden = collapseContent.classList.contains('hidden');
+      if (isHidden) {
+        collapseContent.classList.remove('hidden');
+        collapseArrow?.classList.add('rotate-180');
+      } else {
+        collapseContent.classList.add('hidden');
+        collapseArrow?.classList.remove('rotate-180');
+      }
+    });
+  }
+  
+  // Newsletter form
+  const newsletterForm = document.getElementById('newsletter-form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(newsletterForm);
+      const data = Object.fromEntries(formData.entries());
+      data.source = "newsletter";
+      data.consent = true; // Newsletter implies consent
+      
+      const successMessage = document.getElementById('newsletter-success-message');
+      const errorMessage = document.getElementById('newsletter-error-message');
+      
+      successMessage?.classList.add('hidden');
+      errorMessage?.classList.add('hidden');
+      
+      // Analytics event
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'newsletter_submit_attempt', {
+          event_category: 'engagement',
+          event_label: 'newsletter'
+        });
+      }
+      
+      try {
+        const response = await fetch('/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        
+        if (response.ok) {
+          // Analytics success event
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'newsletter_submit_success', {
+              event_category: 'engagement',
+              event_label: 'newsletter'
+            });
+          }
+          successMessage?.classList.remove('hidden');
+          newsletterForm.reset();
+        } else {
+          // Analytics error event
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'newsletter_submit_error', {
+              event_category: 'engagement',
+              event_label: 'newsletter'
+            });
+          }
+          errorMessage?.classList.remove('hidden');
+        }
+      } catch (error) {
+        // Analytics error event
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'newsletter_submit_error', {
+            event_category: 'engagement',
+            event_label: 'newsletter'
+          });
+        }
+        errorMessage?.classList.remove('hidden');
+      }
+    });
+  }
 });

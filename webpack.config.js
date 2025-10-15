@@ -46,6 +46,10 @@ module.exports = {
     port: 3000,
     hot: true,
     open: true,
+    proxy: {
+      '/api': 'http://localhost:4000',
+      '/admin': 'http://localhost:4000'
+    }
   },
   module: {
     rules: [
