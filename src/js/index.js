@@ -1,3 +1,4 @@
+import "core-js/stable";
 import "../../node_modules/tiny-slider/dist/tiny-slider.css";
 import "../css/animate.css";
 import "../css/style.css";
@@ -58,26 +59,29 @@ if (testimonial.length) {
 
 const elem = document.querySelector(".portfolio-grid");
 
-const iso = new Isotope(elem, {
-  // options
-  itemSelector: ".grid-item",
-  masonry: {
-    // use outer width of grid-sizer for columnWidth
-    columnWidth: ".grid-sizer",
-  },
-});
+// EZIHUB FIX: Check if portfolio grid exists before initializing isotope
+if (elem) {
+  const iso = new Isotope(elem, {
+    // options
+    itemSelector: ".grid-item",
+    masonry: {
+      // use outer width of grid-sizer for columnWidth
+      columnWidth: ".grid-sizer",
+    },
+  });
 
-const filterButtons = document.querySelectorAll(
-  ".portfolio-btn-wrapper button",
-);
-filterButtons.forEach((e) =>
-  e.addEventListener("click", () => {
-    const filterValue = event.target.getAttribute("data-filter");
-    iso.arrange({
-      filter: filterValue,
-    });
-  }),
-);
+  const filterButtons = document.querySelectorAll(
+    ".portfolio-btn-wrapper button",
+  );
+  filterButtons.forEach((e) =>
+    e.addEventListener("click", () => {
+      const filterValue = event.target.getAttribute("data-filter");
+      iso.arrange({
+        filter: filterValue,
+      });
+    }),
+  );
+}
 
 //======= portfolio-btn active
 const elements = document.querySelectorAll(".portfolio-btn-wrapper button");

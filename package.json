@@ -33,10 +33,11 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "core-js": "^3.46.0",
     "express": "^4.19.2",
-    "sqlite3": "^5.1.7",
     "isotope-layout": "^3.0.6",
     "mangle-css-class-webpack-plugin": "^5.1.0",
+    "sqlite3": "^5.1.7",
     "tiny-slider": "^2.9.4",
     "wowjs": "^1.1.3"
   }
