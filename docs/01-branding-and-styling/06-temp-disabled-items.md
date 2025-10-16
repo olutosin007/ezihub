@@ -6,7 +6,7 @@ This document catalogs all elements that have been temporarily disabled for the 
 
 **Last Updated**: January 2025  
 **Status**: MVP Launch Ready  
-**Total Disabled Items**: 4
+**Total Disabled Items**: 6
 
 ---
 
@@ -186,6 +186,50 @@ The following team content is safely preserved in the comment block:
 
 ---
 
+## 7. Footer Social Media Icons
+
+### Location
+- **File**: `src/index.html` (lines 1351-1425)
+- **Section**: Footer, company description area
+- **Elements**: 4 social media icon links (Facebook, Twitter, LinkedIn, Instagram)
+
+### Current State
+- **Method**: HTML comment block
+- **Status**: Completely hidden from view
+- **Markers**: `<!-- EZIHUB TEMP DISABLE: Footer social media icons -->`
+
+### Code Reference
+```html
+<!-- EZIHUB TEMP DISABLE: Footer social media icons -->
+<!-- <div class="flex items-center space-x-5">
+  <a href="javascript:void(0)" name="social-link" aria-label="social-link" class="text-dark-text hover:text-primary dark:hover:text-white">
+    <!-- Facebook icon SVG -->
+  </a>
+  <a href="javascript:void(0)" name="social-link" aria-label="social-link" class="text-dark-text hover:text-primary dark:hover:text-white">
+    <!-- Twitter icon SVG -->
+  </a>
+  <a href="javascript:void(0)" name="social-link" aria-label="social-link" class="text-dark-text hover:text-primary dark:hover:text-white">
+    <!-- LinkedIn icon SVG -->
+  </a>
+  <a href="javascript:void(0)" name="social-link" aria-label="social-link" class="text-dark-text hover:text-primary dark:hover:text-white">
+    <!-- Instagram icon SVG -->
+  </a>
+</div> -->
+```
+
+### Re-enablement
+To re-enable the social media icons:
+1. Remove the opening comment `<!-- EZIHUB TEMP DISABLE: Footer social media icons -->`
+2. Remove the closing comment `-->` from the end of the div
+3. The icons will immediately become visible again
+
+### Reason for Disable
+- Client requested to hide social media icons for the MVP launch
+- Allows for easy re-introduction when social media presence is established
+- Non-destructive approach maintains all original styling and functionality
+
+---
+
 ## Summary of Disabled Elements
 
 | Element | Location | Method | Re-enablement |
@@ -194,6 +238,9 @@ The following team content is safely preserved in the comment block:
 | Sign In/Sign Up | Header | HTML comments | Remove `<!-- -->` |
 | How It Works | Hero | HTML comments | Remove `<!-- -->` |
 | Our Team | Full section | Multi-line comment block | Remove `<!--` and `-->` |
+| Footer: Company column text | Footer | Color override to match bg | Restore original text/hover classes |
+| Footer: Resources column text | Footer | Color override to match bg | Restore original text/hover classes |
+| Footer Social Media Icons | Footer | HTML comment block | Remove `<!--` and `-->` |
 
 ---
 
@@ -205,6 +252,63 @@ The following team content is safely preserved in the comment block:
 3. **How It Works**: Remove comment markers from lines 223-241
 4. **Our Team**: Remove opening `<!--` from line 975 and closing `-->` from line 1115
 5. **Our Team Navigation**: Uncomment navigation link from lines 46-54
+6. **Footer Company Text**: Replace color overrides with original text classes
+7. **Footer Resources Text**: Replace color overrides with original text classes
+
+---
+
+## 5. Footer – Company Column Text
+
+### Location
+- **File**: `src/index.html` (around lines 1428–1469)
+- **Section**: Footer → Column heading "Company" and links `Home`, `Product`, `Careers (coming soon)`, `Pricing`
+
+### Current State
+- **Method**: Text visually hidden by setting normal and hover colors to the footer background color `#0b2443`
+- **Why**: Temporarily de-emphasize these links without removing markup
+
+### Code Reference (edited classes)
+```html
+<h3 class="font-heading text-[#0b2443] mb-9 text-2xl font-medium dark:text-[#0b2443]">Company</h3>
+
+<a href="javascript:void(0)" class="font-heading text-[#0b2443] hover:text-[#0b2443] text-base dark:text-[#0b2443] dark:hover:text-[#0b2443]">Home</a>
+```
+
+### Re-enablement
+Replace the color overrides with the original classes:
+```html
+<h3 class="font-heading text-dark mb-9 text-2xl font-medium dark:text-white">Company</h3>
+
+<a href="javascript:void(0)" class="font-heading text-dark-text hover:text-primary text-base dark:hover:text-white">Home</a>
+```
+Repeat for `Product`, `Careers (coming soon)`, and `Pricing` links.
+
+---
+
+## 6. Footer – Resources Column Text
+
+### Location
+- **File**: `src/index.html` (around lines 1473–1506)
+- **Section**: Footer → Column heading "Resources" and links `Press & Media (coming soon)`, `Insights / Blog (launching soon)`, `Contact Us`
+
+### Current State
+- **Method**: Text visually hidden by setting normal and hover colors to the footer background color `#0b2443`
+
+### Code Reference (edited classes)
+```html
+<h3 class="font-heading text-[#0b2443] mb-9 text-2xl font-medium dark:text-[#0b2443]">Resources</h3>
+
+<a href="javascript:void(0)" class="font-heading text-[#0b2443] hover:text-[#0b2443] text-base dark:text-[#0b2443] dark:hover:text-[#0b2443]">Press & Media (coming soon)</a>
+```
+
+### Re-enablement
+Restore the original classes:
+```html
+<h3 class="font-heading text-dark mb-9 text-2xl font-medium dark:text-white">Resources</h3>
+
+<a href="javascript:void(0)" class="font-heading text-dark-text hover:text-primary text-base dark:hover:text-white">Press & Media (coming soon)</a>
+```
+Repeat for `Insights / Blog (launching soon)` and `Contact Us` links.
 
 ### Individual Re-enablement
 Each item can be re-enabled independently without affecting others.

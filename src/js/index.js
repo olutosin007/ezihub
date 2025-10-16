@@ -109,23 +109,27 @@ for (let i = 0; i < elements.length; i++) {
   // ======= Sticky
   window.onscroll = function () {
     const ud_header = document.querySelector(".header");
-    const sticky = ud_header.offsetTop;
+    if (ud_header) {
+      const sticky = ud_header.offsetTop;
 
-    if (window.pageYOffset > sticky) {
-      ud_header.classList.add("sticky");
-    } else {
-      ud_header.classList.remove("sticky");
+      if (window.pageYOffset > sticky) {
+        ud_header.classList.add("sticky");
+      } else {
+        ud_header.classList.remove("sticky");
+      }
     }
 
     // show or hide the back-top-top button
     const backToTop = document.querySelector(".back-to-top");
-    if (
-      document.body.scrollTop > 50 ||
-      document.documentElement.scrollTop > 50
-    ) {
-      backToTop.style.display = "flex";
-    } else {
-      backToTop.style.display = "none";
+    if (backToTop) {
+      if (
+        document.body.scrollTop > 50 ||
+        document.documentElement.scrollTop > 50
+      ) {
+        backToTop.style.display = "flex";
+      } else {
+        backToTop.style.display = "none";
+      }
     }
   };
 
@@ -133,30 +137,40 @@ for (let i = 0; i < elements.length; i++) {
   const menuToggler = document.querySelector(".menu-toggler");
   const menuWrapper = document.querySelector(".menu-wrapper");
 
-  menuToggler.addEventListener("click", () => {
-    menuWrapper.classList.toggle("show");
-    document.body.classList.toggle("overflow-y-hidden lg:overflow-y-auto");
-    menuToggler.querySelector(".cross").classList.toggle("hidden");
-    menuToggler.querySelector(".menu").classList.toggle("hidden");
-  });
-
-  //===== close navbar-collapse when a  clicked
-  document.querySelectorAll(".navbar li:not(.submenu-item) a").forEach((e) =>
-    e.addEventListener("click", () => {
+  if (menuToggler && menuWrapper) {
+    menuToggler.addEventListener("click", () => {
       menuWrapper.classList.toggle("show");
-      document.body.classList.toggle("overflow-y-hidden lg:overflow-y-auto");
+      document.body.classList.toggle("overflow-y-hidden");
+      document.body.classList.toggle("lg:overflow-y-auto");
       menuToggler.querySelector(".cross").classList.toggle("hidden");
       menuToggler.querySelector(".menu").classList.toggle("hidden");
-    }),
-  );
+    });
+  }
+
+  //===== close navbar-collapse when a  clicked
+  if (menuWrapper && menuToggler) {
+    document.querySelectorAll(".navbar li:not(.submenu-item) a").forEach((e) =>
+      e.addEventListener("click", () => {
+        menuWrapper.classList.toggle("show");
+        document.body.classList.toggle("overflow-y-hidden");
+        document.body.classList.toggle("lg:overflow-y-auto");
+        menuToggler.querySelector(".cross").classList.toggle("hidden");
+        menuToggler.querySelector(".menu").classList.toggle("hidden");
+      }),
+    );
+  }
 
   // ===== Sub-menu
   const submenuItems = document.querySelectorAll(".submenu-item");
   submenuItems.forEach((el) => {
-    el.querySelector("a").addEventListener("click", () => {
-      el.querySelector("a").classList.toggle("active");
-      el.querySelector(".submenu").classList.toggle("hidden");
-    });
+    const submenuLink = el.querySelector("a");
+    const submenu = el.querySelector(".submenu");
+    if (submenuLink && submenu) {
+      submenuLink.addEventListener("click", () => {
+        submenuLink.classList.toggle("active");
+        submenu.classList.toggle("hidden");
+      });
+    }
   });
 
   // ====== scroll top js
@@ -188,9 +202,12 @@ for (let i = 0; i < elements.length; i++) {
     return (-c / 2) * (t * (t - 2) - 1) + b;
   };
 
-  document.querySelector(".back-to-top").onclick = () => {
-    scrollTo(document.documentElement);
-  };
+  const backToTopEl = document.querySelector(".back-to-top");
+  if (backToTopEl) {
+    backToTopEl.onclick = () => {
+      scrollTo(document.documentElement);
+    };
+  }
 })();
 
 // Document Loaded
@@ -199,14 +216,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const darkTogglerCheckbox = document.querySelector("#darkToggler");
   const html = document.querySelector("html");
 
-  const darkModeToggler = () => {
-    darkTogglerCheckbox.checked
-      ? html.classList.remove("dark")
-      : html.classList.add("dark");
-  };
-  darkModeToggler();
-
-  darkTogglerCheckbox.addEventListener("click", darkModeToggler);
+  if (darkTogglerCheckbox) {
+    const darkModeToggler = () => {
+      darkTogglerCheckbox.checked
+        ? html.classList.remove("dark")
+        : html.classList.add("dark");
+    };
+    darkModeToggler();
+    darkTogglerCheckbox.addEventListener("click", darkModeToggler);
+  }
 
   // ===== Waitlist modal + forms
   const modal = document.getElementById("waitlist-modal");
