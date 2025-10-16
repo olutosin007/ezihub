@@ -117,41 +117,72 @@ This document catalogs all elements that have been temporarily disabled for the 
 ## 4. Our Team Section
 
 ### Location
-- **File**: `src/index.html` (lines 972-1354)
+- **File**: `src/index.html` (lines 975-1116)
 - **Section**: Entire team section
 - **Elements**: Team member profiles, social links, descriptions
 
 ### Current State
-- **Method**: HTML commented out
+- **Method**: HTML commented out using multi-line comment block
 - **Status**: Completely hidden from view
-- **Markers**: Clear comment blocks at start and end
+- **Markers**: Single comprehensive comment block wrapping entire section
 
 ### Code Reference
 ```html
 <!-- EZIHUB TEMP DISABLE: Our Team section hidden for MVP -->
 <!-- ===== Team Section Start ===== -->
-<!-- <section id="team" class="pt-14 sm:pt-20 lg:pt-[130px]">
-  [Entire team section content]
-</section> -->
+<!--
+<section id="team" class="pt-14 sm:pt-20 lg:pt-[130px]">
+  <div class="px-4 xl:container">
+    <div class="wow fadeInUp relative mx-auto mb-12 pt-6 text-center md:mb-20 lg:pt-16" data-wow-delay=".2s">
+      <span class="title"> Our Team </span>
+      <h2 class="font-heading text-dark mx-auto mb-5 max-w-[620px] text-3xl font-semibold sm:text-4xl md:text-[50px] md:leading-[60px] dark:text-white">
+        The People Behind Verified Trust
+      </h2>
+      <p class="text-dark-text mx-auto max-w-[620px] text-base">
+        We're a diverse team of product thinkers, data ethicists, and human-centric technologists — united by a single mission: to make trust tangible.
+      </p>
+    </div>
+
+    <div class="-mx-4 flex flex-wrap justify-center">
+      [All team member profiles with images, social links, and descriptions]
+    </div>
+  </div>
+</section>
+-->
 <!-- ===== Team Section End ===== -->
 ```
 
 ### Re-enablement
-1. Remove the comment markers `<!-- -->` from both start and end
-2. Uncomment the `<section>` tag
-3. Entire team section will be immediately visible
+1. Remove the opening `<!--` comment marker at line 975
+2. Remove the closing `-->` comment marker at line 1115
+3. The entire team section will be immediately visible and functional
+4. **Note**: Navigation link to `#team` is also commented out (lines 46-54) and should be uncommented if team section is re-enabled
 
-### JavaScript Fix Applied
-- **Issue**: Navigation link to `#team` was causing JavaScript errors when team section was commented out
-- **Fix**: Added null check in scroll handler (line 1892) to prevent `offsetTop` errors
-- **Additional Fix**: Commented out navigation link to `#team` (lines 46-54) to prevent scroll handler from trying to access non-existent element
-- **Final Fix**: Properly commented out entire team section content (lines 976-1355) to completely hide all team information
-- **Status**: Error resolved, navigation works correctly, team section completely hidden
+### JavaScript Fixes Applied
+- **Issue 1**: Navigation link to `#team` was causing JavaScript errors when team section was commented out
+- **Fix 1**: Commented out navigation link to `#team` (lines 46-54) to prevent scroll handler from trying to access non-existent element
+- **Issue 2**: Duplicate team content was still visible despite initial commenting
+- **Fix 2**: Completely removed all duplicate team content and properly structured the comment block
+- **Issue 3**: Team member names and images were still showing due to incomplete commenting
+- **Fix 3**: Wrapped entire team section in a single comprehensive comment block
+- **Status**: All errors resolved, navigation works correctly, team section completely hidden
+
+### Content Preserved
+The following team content is safely preserved in the comment block:
+- **Section Title**: "Our Team" and "The People Behind Verified Trust"
+- **Team Description**: Full description text
+- **CEO Profile**: Name, image, social links, and designation
+- **COO Profile**: Name, image, social links, and designation  
+- **CTO Profile**: Name, image, social links, and designation
+- **CMO Profile**: Name, image, social links, and designation
+- **All Styling**: Complete CSS classes and responsive design
+- **All Functionality**: Hover effects, animations, and social media links
 
 ### Reason for Disable
-- Team member information not finalized
-- Focus on product messaging for MVP
-- Can be added when team profiles are ready
+- Team member information not finalized for MVP
+- Focus on product messaging and lead capture for initial launch
+- Can be easily re-enabled when team profiles are ready
+- Non-destructive approach maintains all original content and styling
 
 ---
 
@@ -162,7 +193,7 @@ This document catalogs all elements that have been temporarily disabled for the 
 | Theme Toggle | Header | `class="hidden"` | Remove `hidden` class |
 | Sign In/Sign Up | Header | HTML comments | Remove `<!-- -->` |
 | How It Works | Hero | HTML comments | Remove `<!-- -->` |
-| Our Team | Full section | HTML comments | Remove `<!-- -->` |
+| Our Team | Full section | Multi-line comment block | Remove `<!--` and `-->` |
 
 ---
 
@@ -172,7 +203,8 @@ This document catalogs all elements that have been temporarily disabled for the 
 1. **Theme Toggle**: Remove `hidden` class from line 88
 2. **Sign In/Sign Up**: Remove comment markers from lines 68-80
 3. **How It Works**: Remove comment markers from lines 223-241
-4. **Our Team**: Remove comment markers from lines 972-1354
+4. **Our Team**: Remove opening `<!--` from line 975 and closing `-->` from line 1115
+5. **Our Team Navigation**: Uncomment navigation link from lines 46-54
 
 ### Individual Re-enablement
 Each item can be re-enabled independently without affecting others.
