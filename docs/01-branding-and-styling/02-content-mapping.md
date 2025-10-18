@@ -1,32 +1,32 @@
-# Content Mapping - EziHub Website
+# Content Mapping - ézíhub Website
 
-This document outlines the content mapping from template content to EziHub-specific content across all sections of the website.
+This document outlines the content mapping from template content to ézíhub-specific content across all sections of the website.
 
 ## Hero Section
 
-| Template Content | EziHub Website Content |
+| Template Content | ézíhub Website Content |
 |------------------|------------------------|
 | **Digital Solutions for Your Startup** | **Verified Credibility for** |
-| Handcrafted Tailwind CSS template for your next - Startup, Business, Agency or SaaS Website. Comes with refreshing design and everything you need to kickstart your next web project. | EziHub is redefining professional trust through verified credibility - helping professionals and organisations prove what's real, build authentic reputations, and connect through trust. |
+| Handcrafted Tailwind CSS template for your next - Startup, Business, Agency or SaaS Website. Comes with refreshing design and everything you need to kickstart your next web project. | ézíhub is redefining professional trust through verified credibility - helping professionals and organisations prove what's real, build authentic reputations, and connect through trust. |
 | **Get Started** | **Join the Waitlist** |
 | **How it Work** | **How It Works** |
-| hero-image | *(Replace with EziHub hero graphic or illustration showing trust connection between talent, employer, and verifier)* |
+| hero-image | *(Replace with ézíhub hero graphic or illustration showing trust connection between talent, employer, and verifier)* |
 
 ---
 
 ## Features Section
 
-| Template Content | EziHub Website Content |
+| Template Content | ézíhub Website Content |
 |------------------|------------------------|
-| **FEATURES** | **Why EziHub Matters** |
+| **FEATURES** | **Why ézíhub Matters** |
 | **Our Unique & Awesome Core Features** | **A Simple, Human-Centred Approach to Verified Credibility** |
-| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus. | EziHub connects professionals, employers, and institutions through a transparent layer of verified trust; making credibility portable, ethical, and real. |
+| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus. | ézíhub connects professionals, employers, and institutions through a transparent layer of verified trust; making credibility portable, ethical, and real. |
 | **Crafted for Startups** | **Built for Professionals** |
-| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor. | Whether you're starting your career or scaling your team, EziHub makes trust a shared advantage. |
+| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor. | Whether you're starting your career or scaling your team, ézíhub makes trust a shared advantage. |
 
 ### Feature Items
 
-| Template Content | EziHub Website Content |
+| Template Content | ézíhub Website Content |
 |------------------|------------------------|
 | **High-quality Design** | **Verified, Not Claimed** |
 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor. | Every profile, credential, and reference is backed by verified data — not just words. |
@@ -35,7 +35,7 @@ This document outlines the content mapping from template content to EziHub-speci
 | **Speed Optimized** | **Effortless Verification** |
 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor. | What used to take days now takes minutes, with clarity and compliance at every step. |
 | **Fully Customizable** | **Designed Around You** |
-| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor. | EziHub adapts to individuals, teams, and institutions - a platform built to evolve with your needs. |
+| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor. | ézíhub adapts to individuals, teams, and institutions - a platform built to evolve with your needs. |
 | **Regular Updates** | **Constantly Evolving** |
 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor. | We're continuously improving to make professional trust easier, faster, and fairer for everyone. |
 
@@ -43,31 +43,31 @@ This document outlines the content mapping from template content to EziHub-speci
 
 ## About Section
 
-| Template Content | EziHub Website Content |
+| Template Content | ézíhub Website Content |
 |------------------|------------------------|
-| **ABOUT US** | **About EziHub** |
+| **ABOUT US** | **About ézíhub** |
 | **Know Details About Our Company** | **Redefining Trust in the Professional World** |
-| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus. | EziHub is building the foundation for a more transparent professional ecosystem where individuals and organisations connect through verified credibility. |
+| Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus. | ézíhub is building the foundation for a more transparent professional ecosystem where individuals and organisations connect through verified credibility. |
 | **About Us / Our Mission / Our Vision** | **Our Mission:** To make trust verifiable, portable, and fair. **Our Vision:** A world where credibility is not claimed — it's earned. |
 | about-image | *(Replace with image symbolising connection, data verification, or modern workforce)* |
 | **We are Creative Digital Agency Based in USA** | **We're a UK-based HR Tech Company Focused on Trust** |
-| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum sapien ac leo cursus dignissim. In ac lectus vel orci accumsan ultricies at in libero accumsan. | Founded on a simple belief: professionals deserve recognition based on truth. EziHub helps them prove what's real and connect with organisations that value integrity. |
+| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce condimentum sapien ac leo cursus dignissim. In ac lectus vel orci accumsan ultricies at in libero accumsan. | Founded on a simple belief: professionals deserve recognition based on truth. ézíhub helps them prove what's real and connect with organisations that value integrity. |
 | Phasellus ex massa, facilisis ac vestibulum eget, ultrices quis nulla. Integer vitae magna lacus. Sed venenatis auctor dolor. | We combine design, ethics, and technology to make verification effortless, without compromising privacy or ownership. |
-| Phasellus ex massa, facilisis ac vestibulum eget, ultrices quis nulla. Integer vitae magna lacus. Sed venenatis auctor dolor. | From freelancers to enterprises, EziHub is for anyone who values trust as the foundation of collaboration. |
+| Phasellus ex massa, facilisis ac vestibulum eget, ultrices quis nulla. Integer vitae magna lacus. Sed venenatis auctor dolor. | From freelancers to enterprises, ézíhub is for anyone who values trust as the foundation of collaboration. |
 
 ---
 
 ## Team Section
 
-| Template Content | EziHub Website Content |
+| Template Content | ézíhub Website Content |
 |------------------|------------------------|
-| **OUR TEAM** | **Meet the EziHub Team** |
+| **OUR TEAM** | **Meet the ézíhub Team** |
 | **Meet With Our Creative Dedicated Team** | **The People Behind Verified Trust** |
 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus. | We're a diverse team of product thinkers, data ethicists, and human-centric technologists — united by a single mission: to make trust tangible. |
 
 ### Team Members
 
-| Template Content | EziHub Website Content |
+| Template Content | ézíhub Website Content |
 |------------------|------------------------|
 | team-image — Olivia Andrium (Project Manager) | **CEO** |
 | team-image — Jemse Kemorun (Project Designer) | **COO** |
@@ -78,7 +78,7 @@ This document outlines the content mapping from template content to EziHub-speci
 
 ## Support/Contact Section
 
-| Template Content | EziHub Website Content |
+| Template Content | ézíhub Website Content |
 |------------------|------------------------|
 | **Need Any Help? Say hello** | **Let's Build Trust Together** |
 | Lorem ipsum dolor sit amet, consectetur adipiscing elit Donec vitae tortor aliquam ante. | We'd love to hear from professionals, organisations, and partners shaping the future of verified credibility. |
@@ -91,17 +91,17 @@ This document outlines the content mapping from template content to EziHub-speci
 
 ## Footer Section
 
-| Template Content | EziHub Website Content |
+| Template Content | ézíhub Website Content |
 |------------------|------------------------|
 | **Looking for a collaboration? Get Started Today!** | **Interested in collaborating? Let's connect.** |
 | Lorem ipsum dolor sit amet, consectetur adipiscing elit. | Whether you're exploring partnerships, integrations, or early access — we'd love to hear from you. |
 | **Get Started Now** | **Join the Waitlist** |
-| logo + Lorem ipsum dolor sit amet, consectetur adipiscing elit. | **EziHub** *The trust layer for the professional workforce.* We're building tools that make credibility verifiable, portable, and fair. |
+| logo + Lorem ipsum dolor sit amet, consectetur adipiscing elit. | **ézíhub** *The trust layer for the professional workforce.* We're building tools that make credibility verifiable, portable, and fair. |
 | Company / Home / Product / Careers / Pricing / Support | Company Home About Product Careers *(coming soon)* Pricing Contact |
 | Company / Press media / Our Blog / Contact Us | Resources Press & Media *(coming soon)* Insights / Blog *(launching soon)* / Contact Us |
 | Get in touch / Toll Free Customer Care +(1) 123 456 7890 | Get in Touch hello@ezihub.com London, United Kingdom |
 | Need live support? support@domain.com | Support: Reach us via email or the contact form above. |
-| Newsletter Subscribe to receive future updates / Email address | Stay in the Loop Be first to know when EziHub launches. **Email Address Field CTA: Subscribe** |
+| Newsletter Subscribe to receive future updates / Email address | Stay in the Loop Be first to know when ézíhub launches. **Email Address Field CTA: Subscribe** |
 
 ---
 
@@ -128,4 +128,4 @@ This document outlines the content mapping from template content to EziHub-speci
 
 ---
 
-*This document serves as the master reference for all content updates across the EziHub website.*
+*This document serves as the master reference for all content updates across the ézíhub website.*

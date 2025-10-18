@@ -1,6 +1,6 @@
-# EziHub Website
+# ézíhub Website
 
-A modern, responsive website for EziHub - the verified credibility platform for the modern workforce.
+A modern, responsive website for ézíhub - the verified credibility platform for the modern workforce.
 
 ## 🚀 Features
 
@@ -113,4 +113,4 @@ ezihub/
 
 ## 📄 License
 
-© 2025 EziHub. All rights reserved.
+© 2025 ézíhub. All rights reserved.

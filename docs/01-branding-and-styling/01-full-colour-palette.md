@@ -1,4 +1,4 @@
-# Full Colour Palette - EziHub Website
+# Full Colour Palette - ézíhub Website
 
 ## Current Template Colors (GoStartup)
 
@@ -114,7 +114,7 @@ background: linear-gradient(
 
 ---
 
-## EziHub Brand Colors
+## ézíhub Brand Colors
 
 > **Brand Philosophy**: "Our colour palette visually and tangibly expresses our values. We are: trustworthy, professional and secure. We are also human, helpful and aspirational."
 
@@ -158,14 +158,14 @@ background: linear-gradient(
 
 ## Color Harmony Analysis
 
-### Template vs EziHub Brand Colors
+### Template vs ézíhub Brand Colors
 
 **Template Characteristics:**
 - **Primary**: Bright blue (#4a6cf7) - Tech-focused, energetic
 - **Dark Theme**: Deep navy/charcoal range - Modern, sophisticated
 - **Temperature**: Cool palette (blues, grays) - Professional and calming
 
-**EziHub Brand Characteristics:**
+**ézíhub Brand Characteristics:**
 - **Primary**: Deeper blues (#1f6db5, #0f315b) - More trustworthy, professional
 - **Secondary**: Warm earth tones (browns, golds) - Human, authentic
 - **Extended**: Full spectrum (greens, purples) - Comprehensive, versatile
@@ -174,7 +174,7 @@ background: linear-gradient(
 ### Recommended Color Mapping
 
 **Primary Brand Colors:**
-- Replace template `#4a6cf7` with EziHub `#1f6db5` (Trusted Blue)
+- Replace template `#4a6cf7` with ézíhub `#1f6db5` (Trusted Blue)
 - Use `#0f315b` (Sensei Blue) for dark mode headers/navigation
 
 **Accent Colors:**
@@ -208,7 +208,7 @@ background: linear-gradient(
 --color-stroke: #e5e7eb;
 ```
 
-### Recommended Extended Variables (EziHub Brand)
+### Recommended Extended Variables (ézíhub Brand)
 ```css
 /* Primary Brand Colors */
 --color-trusted-blue: #1f6db5;

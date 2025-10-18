@@ -44,7 +44,7 @@ app.post('/api/leads', (req, res) => {
 app.get('/admin/leads', (req, res) => {
   db.all(`SELECT id, firstName, lastName, email, company, roleOrInterest, source, createdAt FROM leads ORDER BY id DESC LIMIT 500`, [], (err, rows) => {
     if (err) return res.status(500).send('db_error');
-    const html = `<!doctype html><html><head><meta charset="utf-8"><title>EziHub Leads</title>
+    const html = `<!doctype html><html><head><meta charset="utf-8"><title>ézíhub Leads</title>
     <style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;padding:24px;background:#0f315b;color:#fff}table{width:100%;border-collapse:collapse}th,td{padding:8px;border-bottom:1px solid #21466f}th{text-align:left}caption{margin-bottom:12px;font-weight:700}</style></head>
     <body><h1>Leads</h1><table><thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Company</th><th>Role</th><th>Source</th><th>Created</th></tr></thead><tbody>
     ${rows.map(r=>`<tr><td>${r.id}</td><td>${(r.firstName||'')+' '+(r.lastName||'')}</td><td>${r.email}</td><td>${r.company||''}</td><td>${r.roleOrInterest||''}</td><td>${r.source||''}</td><td>${r.createdAt}</td></tr>`).join('')}

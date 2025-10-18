@@ -1,11 +1,11 @@
-# EziHub Privacy Policy
+# ézíhub Privacy Policy
 
 Effective date: January 2025
 
 ## 1) Who we are
-EziHub ("EziHub", "we", "us", or "our") is a UK-based technology company building tools that make professional credibility verifiable, portable, and fair.
+ézíhub ("ézíhub", "we", "us", or "our") is a UK-based technology company building tools that make professional credibility verifiable, portable, and fair.
 
-- Controller: EziHub
+- Controller: ézíhub
 - Location: London, United Kingdom
 - Contact: hello@ezihub.com
 
@@ -17,7 +17,7 @@ This policy applies to:
 - People who submit forms (waitlist, contact, newsletter)
 - Prospective partners and vendors who communicate with us
 
-If a future EziHub product processes additional categories of data, a product‑specific notice will be provided at the point of collection.
+If a future ézíhub product processes additional categories of data, a product‑specific notice will be provided at the point of collection.
 
 ## 3) Personal data we collect
 - Contact details: first name, last name, email, company, role/interest
@@ -35,7 +35,7 @@ We do not intentionally collect special category data via our website forms.
 
 ## 5) How we use data
 - Respond to enquiries and provide requested information
-- Manage the waitlist and send relevant updates about EziHub
+- Manage the waitlist and send relevant updates about ézíhub
 - Send newsletters and product announcements (with consent where required)
 - Maintain security, prevent fraud or abuse, and troubleshoot issues
 - Analyse and improve our website and communications
@@ -101,4 +101,4 @@ If you have questions or concerns about this policy or our data practices, pleas
 - Address: London, United Kingdom
 
 ---
-This policy is intended to be clear and concise. Further product‑specific privacy information will be provided as EziHub Services evolve.
+This policy is intended to be clear and concise. Further product‑specific privacy information will be provided as ézíhub Services evolve.

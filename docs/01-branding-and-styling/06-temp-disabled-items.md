@@ -1,8 +1,8 @@
-# Temporarily Disabled Items - EziHub Website MVP
+# Temporarily Disabled Items - ézíhub Website MVP
 
 ## Overview
 
-This document catalogs all elements that have been temporarily disabled for the MVP launch of the EziHub website. These items are hidden but can be easily re-enabled when needed.
+This document catalogs all elements that have been temporarily disabled for the MVP launch of the ézíhub website. These items are hidden but can be easily re-enabled when needed.
 
 **Last Updated**: January 2025  
 **Status**: MVP Launch Ready  
@@ -355,6 +355,6 @@ Each item can be re-enabled independently without affecting others.
 
 ---
 
-**Document Maintained By**: EziHub Development Team  
+**Document Maintained By**: ézíhub Development Team  
 **Review Frequency**: Monthly  
 **Next Review**: February 2025

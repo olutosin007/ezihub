@@ -1,5 +1,5 @@
 <!-- cb3183fb-5bb6-4c3a-b462-082284788438 5a65eb24-b841-471d-88d8-21cdc4552d74 -->
-# 03 – EziHub Data Capture Plan (Simple Built‑In System)
+# 03 – ézíhub Data Capture Plan (Simple Built‑In System)
 
 ## Objective
 
@@ -120,8 +120,8 @@ C) Newsletter (footer)
 
 ## Content & Copy
 
-- Keep tone consistent with EziHub voice
-- Short consent: “I agree to be contacted about EziHub. See Privacy Policy.”
+- Keep tone consistent with ézíhub voice
+- Short consent: “I agree to be contacted about ézíhub. See Privacy Policy.”
 
 ## Rollout Plan
 

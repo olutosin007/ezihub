@@ -1,8 +1,8 @@
-# EziHub Lead Capture - Admin Usage Guide
+# ézíhub Lead Capture - Admin Usage Guide
 
 ## Overview
 
-The EziHub website includes a built-in lead capture system that collects visitor information from multiple touchpoints and stores them in a SQLite database for easy access and export.
+The ézíhub website includes a built-in lead capture system that collects visitor information from multiple touchpoints and stores them in a SQLite database for easy access and export.
 
 ## Accessing the Admin Interface
 
@@ -150,4 +150,4 @@ For technical issues with the lead capture system:
 
 **Last Updated**: January 2025  
 **Version**: 1.0  
-**Maintained By**: EziHub Development Team
+**Maintained By**: ézíhub Development Team
